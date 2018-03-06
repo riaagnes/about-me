@@ -1,0 +1,28 @@
+ 
+ body{
+background : rgb(0, 183, 255);
+}
+h1{
+  text-align: center;
+}
+p{
+  text-align: center;
+}
+#name{
+  background: blueviolet;
+}
+#reading{
+  background: blueviolet;
+}
+#sofdev{
+  background: blueviolet;
+}
+#gitar{
+  background: blueviolet;
+}
+#sandwich{
+  background: blueviolet;
+}
+#dance{
+  background: blueviolet;
+}
