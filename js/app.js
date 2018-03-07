@@ -45,14 +45,15 @@ else{
 var softDev = prompt('Are you intrested in software development? please type \'yes\' or \'no\'');
 if(softDev.toLowerCase() === 'no'){
   var check = prompt('Are you confused about topics in computer science? please type \'yes\' or \'no\'');
+  if(check.toLowerCase () === 'yes'){
+    alert('join codeFellows!!!');
+  }
 }
 else{
   alert('Very good!!! keep coding!!!');
   console.log(userName + ' likes coding');
 }
-if(check.toLowerCase () === 'yes'){
-  alert('join codeFellows!!!');
-}
+
 
 
 
