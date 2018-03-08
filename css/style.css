@@ -1,28 +1,40 @@
  
  body{
-background : rgb(0, 183, 255);
+background : rgb(73, 77, 78);
 }
 h1{
   text-align: center;
+  font-size: 50px;
+  padding:10px 100px 10px 10px;
+  background: gray
 }
-p{
-  text-align: center;
+nav li{
+  display:inline;
+  padding:5px 100px 5px 100px;
+  margin:5px 100px 200px 100px;
+  
 }
-#name{
+nav{
+  padding:5px 100px 10px 100px;
+  background-color:honeydew;
+}
+h2{
+  background: rgb(134, 141, 148);
+  text-align:center;
+}
+
+
+section ul  {
+  list-style-type:circle;
+  text-align: left;
+  padding:10px 50px 0px 50px;
+}
+section ol {
+  list-style-type:upper-roman;
+  text-align: left;
+  padding:10px 50px 0px 50px;
+}
+.name{
   background: blueviolet;
-}
-#reading{
-  background: blueviolet;
-}
-#sofdev{
-  background: blueviolet;
-}
-#gitar{
-  background: blueviolet;
-}
-#sandwich{
-  background: blueviolet;
-}
-#dance{
-  background: blueviolet;
+  padding:5px 0px 5px 5px;
 }
