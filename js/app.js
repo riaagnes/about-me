@@ -65,7 +65,7 @@ for(var i=0;i<4;i++){
     alert('Correct');
     correct.push(1);
     break;}
-  else if (guess<=21){
+  else if (guess <= 21){
     alert('Your guess is too low,');
   }
   else{
