@@ -1,124 +1,154 @@
 'use strict';
 
 var userName;
+var correct =[];
 function welcome() {
+
   userName = prompt('What is your name?');
   alert('Hello '+ userName + ' Welcome to my website ');
-  var likeReading = prompt('Do you like reading? please type \'yes\' or \'no\'.' );
-
+  var likeReading = prompt('Do you think that I like to read? please type \'yes\' or \'no\'.' );
+  while(likeReading.length<1){
+    alert('you did not answer my question');
+    likeReading = prompt('Do you think that I like to read? please type \'yes\' or \'no\'.' );
+  }
   if(likeReading.toLowerCase() === 'yes' ){
-    alert('cool!!! Reading is a good habit.keep reading');
-    console.log(userName + ' likes reading');
+    alert('yes! I like to read');
+    console.log( 'Ria likes reading');
+    correct.push(1);
   }
-  else{
-    alert('awee...');
-    console.log(userName + ' doesnt likes reading');
+  else {
+    alert('No,you are wrong, i like to read. ' );
+    console.log( ' Ria likes reading');
+
   }
 
-
-  var playGitar = prompt('Do you like to play gitar?please type\'yes\' or \'no\'.');
+  var playGitar = prompt('Do I like to play gitar?please type\'yes\' or \'no\'.');
+  while(playGitar.length<1){
+    alert('You did not answer my Question');
+    playGitar = prompt('Do I like to play gitar?please type\'yes\' or \'no\'.');
+  }
   if(playGitar.toLowerCase() === 'yes'){
-    alert('intresting');
-    console.log(userName + ' likes to play gitar');
+    alert('Yes!! I like to play gitar');
+    console.log('Ria likes to play gitar');
+    correct.push(1);
   }
   else{
-    alert('You might be intrested in some other instruments');
-    console.log(userName + ' likes to read some other intrument');
+    alert('No!! I like to play gitar');
+    console.log('Ria likes to read gitar');
   }
 
-  var sandWich = prompt('Do you like sandwich?please type\'yes\' or \'no\'');
+  var sandWich = prompt('Do I like sandwich?please type\'yes\' or \'no\'');
+  while(sandWich.length<1){
+    alert('You did not answer my question');
+    sandWich = prompt('Do I like sandwich?please type\'yes\' or \'no\'');
+  }
 
   if(sandWich.toLowerCase() === 'yes'){
-    alert('woww');
-    console.log(userName +' likes sandwich');
+    alert('No!! I don\'t like sandwich');
+    console.log('Ria don\'t like sandwich');
+    correct.push(1);
   }
   else{
-    alert('You might like Burgers');
-    console.log(userName + ' might like burgur'); 
+    alert('Yes!! I don\'t like sandwich');
+    console.log('Ria don\'t like sandwich');
   }
-  var dance = prompt('Do you like to dance? please type \'yes\' or \'no\'.');
+  var dance = prompt('Do you think that I like to dance? please type \'yes\' or \'no\'.');
+  while(dance.length<1){
+    alert('You did not answer my question');
+    dance = prompt('Do you think that I like to dance? please type \'yes\' or \'no\'.');
+
+  }
   if(dance.toLowerCase() === 'yes'){
-    alert('great!!!');
-    console.log(userName + ' likes to dance');
+    alert('Yes!!! I like to dance');
+    console.log('Ria likes to dance');
+    correct.push(1);
   }
   else{
-    alert('You might like to sing');
-    console.log(userName + ' might like to sing');
+    alert('No,I like to dance');
+    console.log('Ria likes to dance');
   }
-  var softDev = prompt('Are you intrested in software development? please type \'yes\' or \'no\'');
+  var softDev = prompt('Do you think I am intrested in software development? please type \'yes\' or \'no\'');
+  while(softDev.length<1){
+    alert('You did not answer my question');
+    softDev = prompt('Do you think I am intrested in software development? please type \'yes\' or \'no\'');
+
+  }
   if(softDev.toLowerCase() === 'no'){
-    var check = prompt('Are you confused about topics in computer science? please type \'yes\' or \'no\'');
-    if(check.toLowerCase () === 'yes'){
-      alert('join codeFellows!!!');
-    }
+    alert('No!! I am intrested in software development');
+    console.log('Ria likes coding');
   }
-  else{
-    alert('Very good!!! keep coding!!!');
-    console.log(userName + ' likes coding');
+  else {
+    alert('Yes!! i am intrested in software development');
+    console.log('Ria likes coding');
+    correct.push(1);
   }
 }
 welcome();
 
 function guesesLevelTwo () {
   alert('You have 4 guesses.');
-  var myAge = 22;
+
   var guess;
-  var correct =[];
   for(var i=0;i<4;i++){
     console.log(i);
     guess = prompt('Can you guess my age?');
+
+    while(guess === ''){
+      alert('You did not answer my question');
+      guess = prompt('can you guess my');
+    }
     guess = parseInt(guess);
     if(guess === 22){
       alert('Correct');
-      correct.push(1);  
-      break;}
+      correct.push(1);
+      break;
+    }
     else if (guess <= 21){
       alert('Your guess is too low,');
- }
+    }
     else{
-         alert('Your guess is too high');
+      alert('Your guess is too high');
+    }
   }
-}
-var possibilities =['amazon','google','microsoft','apple'];
-var futureJob = 'google';
-var trial;
-alert('You have 6 guesses');
-for(var j = 0; j<6; j++){
-  console.log(j);
-  trial = prompt('Can you guess the company where i am gonna work in future').toLowerCase();
-  if(trial === possibilities[0]){
-    alert('yea!! I will be working with '+possibilities[0]);
-    correct.push(1);
-    console.log('I will be working with either one of these companies'+ possibilities[0],possibilities[1],possibilities[2], possibilities[3]);
-    break;
+  var possibilities =['amazon','google','microsoft','apple'];
+  var trial;
+  alert('You have 6 guesses');
+  for(var j = 0; j<6; j++){
+    console.log(j);
+    trial = prompt('Can you guess the company where i am gonna work in future').toLowerCase();
+    while( trial.length<1){
+      alert('You did not answer my question');
+      trial = prompt('Can you guess the company where i am gonna work in future').toLowerCase();
+
+    }
+    if(trial === possibilities[0]){
+      alert('yea!! I will be working with '+possibilities[0]);
+      correct.push(1);
+      alert('I will be working with either one of these companies'+ possibilities[0] + possibilities[1] + possibilities[2] + possibilities[3]);
+      break;
+    }
+    else if(trial === possibilities[1]){
+      alert('yea!! I will be working with ' + possibilities[1]);
+      correct.push(1);
+      alert('I will be working with either one of these companies '+ possibilities[0] + possibilities[1] + possibilities[2] + possibilities[3] );
+      break;
+    }
+    else if(trial === possibilities[2]){
+      alert('yea!! I will be working with ' + possibilities[2]);
+      correct.push(1);
+      console.log('I will be working with either one of these companies '+ possibilities[0] + possibilities[1] + possibilities[2] + possibilities[3]);
+      break;
+    }
+    else if(trial === possibilities[3]){
+      alert('yea!! I will be working with '+ possibilities[3]);
+      correct.push(1);
+      alert('I will be working with either one of these companies '+ possibilities[0] + possibilities[1] + possibilities[2] + possibilities[3]);
+      break;
+    }
+    else{
+      alert('No,I will not be working with that company');
+    }
   }
-  else if(trial === possibilities[1]){
-    alert('yea!! I will be working with ' + possibilities[1]);
-    correct.push(1);
-    console.log('I will be working with either one of these companies '+ possibilities[0],possibilities[1],possibilities[2],possibilities[3] );
-    break;
-  }
-  else if(trial === possibilities[2]){
-    alert('yea!! I will be working with ' + possibilities[2]);
-    correct.push(1);
-    console.log('I will be working with either one of these companies '+ possibilities[0],possibilities[1],possibilities[2],possibilities[3]);
-    break;
-  }
-  else if(trial === possibilities[3]){
-    alert('yea!! I will be working with '+ possibilities[3]);
-    correct.push(1);
-    console.log('I will be working with either one of these companies '+ possibilities[0],possibilities[1],possibilities[2],possibilities[3]);
-    break;
-  }
-  else{
-    alert('No,I will not be working with that company');
-  }
-}
-alert('Well done!! You got '+ correct.length +' out of 2 question answers correct ' + userName );
+  alert('Well done!! You got '+ correct.length +' out of 7 question answers correct ' + userName );
 }
 guesesLevelTwo();
-
-
-
-
-
