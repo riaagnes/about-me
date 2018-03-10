@@ -6,6 +6,8 @@ function welcome() {
 
   userName = prompt('What is your name?');
   alert('Hello '+ userName + ' Welcome to my website ');
+}
+function reading(){
   var likeReading = prompt('Do you think that I like to read? please type \'yes\' or \'no\'.' );
   while(likeReading.length<1){
     alert('you did not answer my question');
@@ -21,7 +23,8 @@ function welcome() {
     console.log( ' Ria likes reading');
 
   }
-
+}
+function gitar(){
   var playGitar = prompt('Do I like to play gitar?please type\'yes\' or \'no\'.');
   while(playGitar.length<1){
     alert('You did not answer my Question');
@@ -36,7 +39,8 @@ function welcome() {
     alert('No!! I like to play gitar');
     console.log('Ria likes to read gitar');
   }
-
+}
+function sandwich(){
   var sandWich = prompt('Do I like sandwich?please type\'yes\' or \'no\'');
   while(sandWich.length<1){
     alert('You did not answer my question');
@@ -52,6 +56,8 @@ function welcome() {
     alert('Yes!! I don\'t like sandwich');
     console.log('Ria don\'t like sandwich');
   }
+}
+function danceLike(){
   var dance = prompt('Do you think that I like to dance? please type \'yes\' or \'no\'.');
   while(dance.length<1){
     alert('You did not answer my question');
@@ -67,6 +73,8 @@ function welcome() {
     alert('No,I like to dance');
     console.log('Ria likes to dance');
   }
+}
+function software() {
   var softDev = prompt('Do you think I am intrested in software development? please type \'yes\' or \'no\'');
   while(softDev.length<1){
     alert('You did not answer my question');
@@ -84,8 +92,14 @@ function welcome() {
   }
 }
 welcome();
+reading();
+gitar();
+sandwich();
+danceLike();
+software();
 
-function guesesLevelTwo () {
+
+function guessMyAge() {
   alert('You have 4 guesses.');
 
   var guess;
@@ -110,6 +124,9 @@ function guesesLevelTwo () {
       alert('Your guess is too high');
     }
   }
+}
+guessMyAge();
+function work(){
   var possibilities =['amazon','google','microsoft','apple'];
   var trial;
   alert('You have 6 guesses');
@@ -151,4 +168,5 @@ function guesesLevelTwo () {
   }
   alert('Well done!! You got '+ correct.length +' out of 7 question answers correct ' + userName );
 }
-guesesLevelTwo();
+
+work();
