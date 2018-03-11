@@ -166,7 +166,5 @@ function work(){
       alert('No,I will not be working with that company');
     }
   }
-  alert('Well done!! You got '+ correct.length +' out of 7 question answers correct ' + userName );
 }
-
 work();
