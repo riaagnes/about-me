@@ -5,6 +5,11 @@ var correct =[];
 function welcome() {
 
   userName = prompt('What is your name?');
+  while(userName.length<1){
+    alert('you did not answer my question');
+    userName=prompt('What is your name?');
+
+  }
   alert('Hello '+ userName + ' Welcome to my website ');
 }
 function reading(){
