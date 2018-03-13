@@ -14,7 +14,7 @@ function welcome() {
 }
 function reading(){
   var likeReading = prompt('Do you think that I like to read? please type \'yes\' or \'no\'.' );
-  while(likeReading.length<1){
+  while(!likeReading){
     alert('you did not answer my question');
     likeReading = prompt('Do you think that I like to read? please type \'yes\' or \'no\'.' );
   }
@@ -31,7 +31,7 @@ function reading(){
 }
 function gitar(){
   var playGitar = prompt('Do I like to play gitar?please type\'yes\' or \'no\'.');
-  while(playGitar.length<1){
+  while(!playGitar){
     alert('You did not answer my Question');
     playGitar = prompt('Do I like to play gitar?please type\'yes\' or \'no\'.');
   }
@@ -47,7 +47,7 @@ function gitar(){
 }
 function sandwich(){
   var sandWich = prompt('Do I like sandwich?please type\'yes\' or \'no\'');
-  while(sandWich.length<1){
+  while(!sandWich){
     alert('You did not answer my question');
     sandWich = prompt('Do I like sandwich?please type\'yes\' or \'no\'');
   }
@@ -64,7 +64,7 @@ function sandwich(){
 }
 function danceLike(){
   var dance = prompt('Do you think that I like to dance? please type \'yes\' or \'no\'.');
-  while(dance.length<1){
+  while(!dance){
     alert('You did not answer my question');
     dance = prompt('Do you think that I like to dance? please type \'yes\' or \'no\'.');
 
@@ -81,7 +81,7 @@ function danceLike(){
 }
 function software() {
   var softDev = prompt('Do you think I am intrested in software development? please type \'yes\' or \'no\'');
-  while(softDev.length<1){
+  while(!softDev){
     alert('You did not answer my question');
     softDev = prompt('Do you think I am intrested in software development? please type \'yes\' or \'no\'');
 
@@ -138,7 +138,7 @@ function work(){
   for(var j = 0; j<6; j++){
     console.log(j);
     trial = prompt('Can you guess the company where i am gonna work in future').toLowerCase();
-    while( trial.length<1){
+    while( !trial){
       alert('You did not answer my question');
       trial = prompt('Can you guess the company where i am gonna work in future').toLowerCase();
 
